@@ -1,2 +1,2 @@
 # leren-programmeren
-Een leerpad met 6 modules en een examen(meesterproef), voor het eerste leerjaar.
+Een leerpad met 6 modules en een examen(meesterproef), voor het eerste leerjaar Software Development Niveau 4.
