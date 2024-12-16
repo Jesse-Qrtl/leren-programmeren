@@ -1,9 +1,9 @@
 boodschappenlijst = {}
 
 while True:
-    product = input('Welk artikel wit u toevoegen?: ')
+    product = input('Welk artikel wit u toevoegen?: ').lower()
     hoeveelheid_producten = int(input('Hoeveel hiervan wilt u toevoegen?: '))
-    if product.lower() in boodschappenlijst:
+    if product in boodschappenlijst:
         boodschappenlijst[product] += hoeveelheid_producten
     else:
         boodschappenlijst[product] = hoeveelheid_producten

@@ -51,6 +51,10 @@ if leeftijd >= 18:
                 print('Sorry u mag niet alcohol bestellen onder de leeftijd van 21.')
                 print(f'Probeer het over {MIN_LEEFTIJD_DRANK - leeftijd} jaar nog eens.')
                 exit()
+            if rood_bandje or blauw_bandje:
+                print('Alstublieft complimenten van het huis.')
+            else:
+                print(f'Alsjeblieft uw {gekozen_drank} dat is dan {prijs}$.')
                 
         elif gekozen_drank.lower() == 'cola':
             prijs = PRIJS_COLA
