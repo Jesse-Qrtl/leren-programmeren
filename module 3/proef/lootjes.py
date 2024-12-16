@@ -24,3 +24,14 @@ while True:
     if gehusseld:
         break
 
+while True:
+    print(f'\n{deelnemers}')
+    check_naam = input('Welke naam wil je checken?: ').lower()
+    if check_naam in deelnemers:
+        index_naam = deelnemers.index(check_naam)
+        print(f'\n{deelnemers[index_naam]} heeft {lootjes[index_naam]} getrokken als lootje.')
+        verder_checken = input('Wil je nog een naam checken?: ').lower()
+        if verder_checken == 'nee':
+            break
+    else:
+        print('Deze persoon doet niet mee.')
