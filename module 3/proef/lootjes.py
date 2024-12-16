@@ -24,5 +24,3 @@ while True:
     if gehusseld:
         break
 
-for i in range(len(deelnemers)):
-    print(f'\n{deelnemers[i]} heeft {lootjes[i]} getrokken als lootje.\n')
