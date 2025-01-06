@@ -1,22 +1,23 @@
-def addition(getal_1: int, getal_2: int) -> float:
-    totaal = float(getal_1 + getal_2)
-    return totaal
+from functions import *
+from test_lib import *
 
-def subtraction(getal_1: int, getal_2: int) -> float:
-    totaal = float(getal_1 - getal_2)
-    return totaal
+getal_1 = 3
+getal_2 = 3
 
-def multiplication(getal_1: int, getal_2: int) -> float:
-    totaal = float(getal_1 * getal_2)
-    return totaal
+expected = addition(getal_1,getal_2)
+result_lambdafunction1 = addition(getal_1,getal_2)
+test('Test som functie', expected, result_lambdafunction1)
 
-def division(getal_1:int, getal_2: int) -> float:
-    totaal = float(getal_1 / getal_2)
-    return totaal
+expected = subtraction(getal_1,getal_2)
+result_lambdafunction2 = subtraction(getal_1,getal_2)
+test('Test som functie', expected, result_lambdafunction2)
 
-def get_getal(zin: str) -> float:
-        while True:
-            try:
-                return float(input(zin))
-            except ValueError:
-                print("Ongeldige invoer. Voer een getal in met de juiste waarde.")
+expected = multiplication(getal_1,getal_2)
+result_lambdafunction3 = multiplication(getal_1,getal_2)
+test('Test som functie', expected, result_lambdafunction3)
+
+expected = division(getal_1,getal_2)
+result_lambdafunction4 = division(getal_1,getal_2)
+test('Test som functie', expected, result_lambdafunction4)
+
+report()

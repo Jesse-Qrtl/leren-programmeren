@@ -138,3 +138,5 @@ def report():
   while len(data['results']) > 0:
     line = data['results'].pop(0)
     print_colorvars(txt=line['txt'],vars=line['vars'], color=line['color'])
+
+report()
