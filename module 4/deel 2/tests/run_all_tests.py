@@ -1,5 +1,5 @@
 import sys, os
-from test_lib import report, add_test_result
+from tests.test_lib import report, add_test_result
 
 currentDir = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.dirname(currentDir))
