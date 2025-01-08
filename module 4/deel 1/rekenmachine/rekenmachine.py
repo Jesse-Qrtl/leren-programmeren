@@ -11,11 +11,11 @@ while True:
         n1 = get_getal('eerste getal: ')
     else:
         n1 = resultaat
-    if choice == 'a' or 'b' or 'c' or 'd':
+    if choice in ['a' , 'b' , 'c' , 'd']:
         n2 = get_getal('tweede getal: ')
-    elif choice == 'e' or 'f':
+    elif choice in ['e', 'f']:
         n2 = 1
-    elif choice == 'g' or 'h':
+    elif choice in ['g', 'h']:
         n2 = 2
 
     if choice == 'a':
