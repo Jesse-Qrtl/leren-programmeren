@@ -1,6 +1,6 @@
 import time
 from termcolor import colored
-from data import JOURNEY_IN_DAYS, COST_FOOD_HORSE_COPPER_PER_DAY, COST_FOOD_HUMAN_COPPER_PER_DAY
+from data import JOURNEY_IN_DAYS, COST_FOOD_HORSE_COPPER_PER_DAY, COST_FOOD_HUMAN_COPPER_PER_DAY, COST_TENT_GOLD_PER_WEEK, COST_HORSE_SILVER_PER_DAY
 
 ##################### O03 #####################
 
@@ -58,21 +58,68 @@ def getAdventuringFriends(friends:list) -> list:
 ##################### O07 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    pass
+    horses = people // 2
+    if people % 2 > 0:
+        horses += 1
+    return horses
 
 def getNumberOfTentsNeeded(people:int) -> int:
-    pass
+    tents = people // 3
+    if people % 3 > 0:
+        tents += 1
+    return tents
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    pass
+    weeks = JOURNEY_IN_DAYS // 7
+    if JOURNEY_IN_DAYS & 7 > 0:
+        weeks += 1
+
+    tent_cost_in_gold = tents * COST_TENT_GOLD_PER_WEEK * weeks
+    horse_cost_in_silver = horses * COST_HORSE_SILVER_PER_DAY * JOURNEY_IN_DAYS
+
+    horse_cost_in_gold = horse_cost_in_silver / 5  # Convert silver to gold
+    total_cost_in_gold = tent_cost_in_gold + horse_cost_in_gold
+
+    return total_cost_in_gold
 
 ##################### O08 #####################
 
 def getItemsAsText(items:list) -> str:
-    pass
+    lijst = []
+    for item in items:
+        amount = item['amount']
+        unit = item['unit']
+        name = item['name']
+        lijst.append(f"{amount}{unit} {name}".strip())
+
+    if len(lijst) == 0:
+        return ""
+    elif len(lijst) == 1:
+        return lijst[0]
+    else:
+        laatste_item = lijst.pop()
+        return ", ".join(lijst) + " & " + laatste_item
 
 def getItemsValueInGold(items:list) -> float:
-    pass
+    total_value_in_gold = 0.0
+    for item in items:
+        amount = item['amount']
+        price_amount = item['price']['amount']
+        price_type = item['price']['type']
+
+        # Convert the price to gold
+        if price_type == "copper":
+            value_in_gold = copper2gold(price_amount)
+        elif price_type == "silver":
+            value_in_gold = silver2gold(price_amount)
+        elif price_type == "gold":
+            value_in_gold = price_amount
+        elif price_type == "platinum":
+            value_in_gold = platinum2gold(price_amount)
+
+        total_value_in_gold += value_in_gold * amount
+
+    return total_value_in_gold
 
 ##################### O09 #####################
 
