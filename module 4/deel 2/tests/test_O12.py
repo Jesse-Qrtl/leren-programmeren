@@ -3,13 +3,11 @@ from test_lib import test, report
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
-from data import JOURNEY_IN_DAYS
+from data import treasure
 
-#schrijf je test hier
-
-expected = 11
-result = JOURNEY_IN_DAYS
-test("journey days test- ", expected, result)
+expected = 9
+result = len(treasure)
+test('treasure imported', expected, result)
 
 if __name__ == "__main__":
     report()
