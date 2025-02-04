@@ -1,0 +1,68 @@
+{
+    "roomorder": "1,7,4,5,6,f,9,h,i,j",
+    "start": "22-01-2025 11:09:22",
+    "end": "22-01-2025 11:09:41",
+    "data": {
+        "player": {
+            "noice": 0,
+            "pickups": [
+                "lever"
+            ]
+        },
+        "route": {
+            "routetaken": [
+                "step A : 1",
+                "step B : 4",
+                "step C : 9",
+                "step D : h"
+            ],
+            "doorcode": "",
+            "errors": [
+                "stap D : function roomh not found"
+            ],
+            "roomanswers": [
+                "room1 : a",
+                "room4 : b",
+                "room9 : b",
+                "roomh : None"
+            ]
+        },
+        "story": {
+            "fullstory": [
+                "Je herinnert je alleen nog de val door een diep gat, na een zware aardbeving.",
+                "Versuft sta je op.",
+                "Je ziet links van je een deur en rechts van je een gang met aan het einde een standbeeld.",
+                "Je opent de deur en stapt er doorheen.",
+                "Tot je verbazing laat je de deur los.",
+                "De deur valt achter je in het slot en lijkt niet meer open te kunnen.",
+                "Je staat in een kamer met allemaal boekenkasten en een grote tafel in het midden.",
+                "Je ziet 2 trappen aan het einde van de kamer.",
+                "Een trap naar beneden en een trap naar boven.",
+                "Je stapt de trap op naar beneden.",
+                "Tot dusver loopt alles gesmeerd, denk je bij jezelf.",
+                "Bij de derde trede hoor je een onheilspellende klik.",
+                "Achter je valt er een rotsblok uit het plafond op de trap en rolt jouw kant op.",
+                "Je rent zo hard je kunt naar beneden en net voor dat het rotsblok je zou raken spring je door een deur opening.",
+                "Je kijkt achter je en ziet dat het rotsblok is blijven steken.",
+                "Voor nu is de kust weer even veilig.",
+                "Helaas is er geen weg terug.",
+                "Dus je begint de kamer te onderzoeken.",
+                "Aan 1 van de muren vindt je een kleine opening in de muur met een hendel er naast.",
+                "De hendel staat in de middelste positie en vraagt er om bewogen te worden.",
+                "Je trek de hendel naar benenden en hij breekt af.",
+                "Een scherpe kant laat zich zien aan de andere kant van de hendel.",
+                "Dit zou wel eens een goede pikhouweel kunnen zijn om dat gat groter te maken...",
+                "Ijverig begin je te hakken op het gat net zolang totdat het groot genoeg is om doorheen te kruipen",
+                "...",
+                "Je bent ergens waar je niet verwacht te zijn.",
+                "Je bent verdwaald geraakt in de dungeon."
+            ],
+            "choices": [
+                "Neem je A) de deur links of B) de gang rechts? : a",
+                "Welke trap neem je? A) links die naar boven gaat of B) rechtdoor die naar beneden gaat? : b",
+                "Welke kant duw je de hendel op? A) Omhoog | B) Naar beneden? : b"
+            ],
+            "errors": []
+        }
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "roomorder": "1,7,4,5,e,f,9,6,2,j",
+    "start": "22-01-2025 11:14:11",
+    "end": "22-01-2025 11:14:58",
+    "data": {
+        "player": {
+            "noice": 1,
+            "pickups": [
+                "lever"
+            ]
+        },
+        "route": {
+            "routetaken": [
+                "step A : 1",
+                "step B : 4",
+                "step C : 9",
+                "step D : 6",
+                "step E : 2",
+                "step F : j"
+            ],
+            "doorcode": "",
+            "errors": [
+                "stap F : function roomj not found"
+            ],
+            "roomanswers": [
+                "room1 : a",
+                "room4 : b",
+                "room9 : b",
+                "room6 : b",
+                "room2 : -",
+                "roomj : None"
+            ]
+        },
+        "story": {
+            "fullstory": [
+                "Je herinnert je alleen nog de val door een diep gat, na een zware aardbeving.",
+                "Versuft sta je op.",
+                "Je ziet links van je een deur en rechts van je een gang met aan het einde een standbeeld.",
+                "Je opent de deur en stapt er doorheen.",
+                "Tot je verbazing laat je de deur los.",
+                "De deur valt achter je in het slot en lijkt niet meer open te kunnen.",
+                "Je staat in een kamer met allemaal boekenkasten en een grote tafel in het midden.",
+                "Je ziet 2 trappen aan het einde van de kamer.",
+                "Een trap naar beneden en een trap naar boven.",
+                "Je stapt de trap op naar beneden.",
+                "Tot dusver loopt alles gesmeerd, denk je bij jezelf.",
+                "Bij de derde trede hoor je een onheilspellende klik.",
+                "Achter je valt er een rotsblok uit het plafond op de trap en rolt jouw kant op.",
+                "Je rent zo hard je kunt naar beneden en net voor dat het rotsblok je zou raken spring je door een deur opening.",
+                "Je kijkt achter je en ziet dat het rotsblok is blijven steken.",
+                "Voor nu is de kust weer even veilig.",
+                "Helaas is er geen weg terug.",
+                "Dus je begint de kamer te onderzoeken.",
+                "Aan 1 van de muren vindt je een kleine opening in de muur met een hendel er naast.",
+                "De hendel staat in de middelste positie en vraagt er om bewogen te worden.",
+                "Je trek de hendel naar benenden en hij breekt af.",
+                "Een scherpe kant laat zich zien aan de andere kant van de hendel.",
+                "Dit zou wel eens een goede pikhouweel kunnen zijn om dat gat groter te maken...",
+                "Ijverig begin je te hakken op het gat net zolang totdat het groot genoeg is om doorheen te kruipen",
+                "Je baant je een weg met je pickhouweel door de smalle gang die schuin naar boven gaat.",
+                "Klimmend, klauterend en met gebruik van je nieuwe tool vind je je weg naar boven.",
+                "Boven aangekomen stuit je op een muur van klimop en licht gloeiende objecten.",
+                "Met een grote zwaai sla je er een weg doorheen en hoort iets vallen op de grond.",
+                "Je stapt een kamer binnen.",
+                "De kamer is verlicht door een zacht gloeiend schijnsel dat wordt uitgezonden door tientallen paarse en roze glinsterende kristallen.",
+                "De muren zijn ruw en bedekt met klimop, maar tussen de weelderige begroeiing fonkelen de kristallen helder, als kleine juwelen in de duisternis.",
+                "Ondanks de vredige uitstraling van de kamer, voelt het als een plaats van rust en bezinning te midden van de grimmige sfeer van de dungeon.",
+                "Op de grond ligt een paarse kristal.",
+                "Vanuit je ooghoek zie je een standbeeld in de hoek van de kamer, met daarnaast een doorgang met een hek.",
+                "Je loopt richting het hek, opent het.",
+                "Je loopt door het hek en het valt achter dicht.",
+                "Voor een kolosale ijzeren deur zie je een wezen van onmetelijke kracht en grandeur: Een Draak...",
+                "De draak ligt rustig te slapen, zijn machtige flanken rijzen gelijkmatig op en neer met zijn ademhaling.",
+                "Je ziet een sleutel om zijn nek zitten, die zal wel voor die grote ijzeren deur zijn.",
+                "Voorzichtig sluip je richting het beest en rijkt naar de sleutel.",
+                "Met veel beleid pak je de sleutel van de nek van de draak.",
+                "Met de sleutel in je hand snel je je naar de grote ijzeren deur.",
+                "Hij past perfect en je opent de deur soepel.",
+                "Je stapt de deur door.",
+                "...",
+                "Je bent ergens waar je niet verwacht te zijn.",
+                "Je bent verdwaald geraakt in de dungeon."
+            ],
+            "choices": [
+                "Neem je A) de deur links of B) de gang rechts? : a",
+                "Welke trap neem je? A) links die naar boven gaat of B) rechtdoor die naar beneden gaat? : b",
+                "Welke kant duw je de hendel op? A) Omhoog | B) Naar beneden? : b",
+                "Wil je het kristal oppakken (Y/N)? : n"
+            ],
+            "errors": []
+        }
+    }
+}
