@@ -8,31 +8,40 @@ print('=============== Frittata recept ===============')
 nr_persons = input_nr_persons('Hoeveel personen eten mee?: ') # replace this with better input
 
 # ----- CALCULATIONS ----
-# calculate factor
+factor = nr_persons / RECIPE_PERSONS
 
-# calculate amount_eggs
+amount_eggs = round_piece(factor * AMOUNT_EGGS)
 
-# calculate amount_milk
+amount_milk = round_quarter(factor * AMOUNT_MILK)
 
-# calculate amount_salt
+amount_salt = round_piece(factor * AMOUNT_SALT)
 
-# calculate amount_pepper
+amount_pepper = round_piece(factor * AMOUNT_PEPPER)
 
-# calculate amount_oil
+amount_oil = round_piece(factor * AMOUNT_OIL)
 
-# calculate amount_onions
+amount_onions = round_piece(factor * AMOUNT_ONIONS)
 
-# calculate amount_garlics
+amount_garlics = round_piece(factor * AMOUNT_GARLICS)
 
-# calculate amount_spinach
+amount_spinach = round_piece(factor * AMOUNT_SPINACH)
 
-# calculate amount_paprikas
+amount_paprikas = round_piece(factor * AMOUNT_PAPRIKAS)
 
-# calculate amount_cheese
+amount_cheese = round_piece(factor * AMOUNT_CHEESE)
 
 # -------- OUTPUT -------
 print('=============== Frittata recept ===============')
 print(f'Ingrediënten voor {nr_persons} personen:')
 print('-----------------------------------------------')
-# print (formatted) all amounts and units combined with their ingrediënt descriptions
+print(f'- {amount_eggs} {UNIT_EGGS} {TXT_EGGS}')
+print(f'- {amount_milk} {UNIT_MILK} {TXT_MILK}')
+print(f'- {amount_salt} {UNIT_SALT} {TXT_SALT}')
+print(f'- {amount_pepper} {UNIT_PEPPER} {TXT_PEPPER}')
+print(f'- {amount_oil} {UNIT_OIL} {TXT_OIL}')
+print(f'- {amount_onions} {UNIT_ONIONS} {TXT_ONIONS}')
+print(f'- {amount_garlics} {UNIT_GARLICS} {TXT_GARLICS}')
+print(f'- {amount_paprikas} {UNIT_PAPRIKAS} {TXT_PAPRIKAS}')
+print(f'- {amount_spinach} {UNIT_SPINACH} {TXT_SPINACH}')
+print(f'- {amount_cheese} {UNIT_CHEESE} {TXT_CHEESE}')
 print('-----------------------------------------------')
