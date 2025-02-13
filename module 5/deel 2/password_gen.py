@@ -1,5 +1,6 @@
 import random
-import string
+import string 
+from math import floor
 
 # Genereer 2-6 hoofdletters
 amount_upper = random.randint(2,6)
@@ -41,3 +42,10 @@ for i in range(len(password) - 1):
         password[-1], password[i] = password[i], password[-1]
         break
 
+# Wissel de 2 middelste getallen om als het hoofdletters zijn
+middle_index = [floor(len(password) / 2), floor(len(password) / 2) + 1]
+for i in range(2):
+    if password[middle_index[i]].isupper() and not password[i].isupper():
+        password[middle_index[i]], password[i] = password[i], password[middle_index[i]]
+
+print(f'\nPassword: {"".join(password)}\n')
