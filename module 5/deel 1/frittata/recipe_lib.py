@@ -28,7 +28,11 @@ def round_piece(amount: float) -> int:
 # returns amount rounded to the closest decimals: .00 or .25 or .50 or 0.75 unless amount >= 10
 def round_quarter(amount: float) -> float:
   if amount < 10:
-    return round(amount * 4) / 4
+    quaters =  round(amount * 4) / 4
+    if quaters == 0:
+      return 0.25
+    else:
+      return quaters
   return round(amount)
 
 
