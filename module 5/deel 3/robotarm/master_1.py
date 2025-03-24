@@ -1,4 +1,5 @@
 from RobotArm import RobotArm
+from collections import Counter
 
 # Import the challenges (in this case challenges/example.py)
 from challenges.master import challenges
@@ -7,6 +8,29 @@ from challenges.master import challenges
 robotArm = RobotArm(challenges[1],0)
 
 # your code starts here:
+kleuren = []
+
+for i in range(10):
+    robotArm.grab()
+
+    kleur = robotArm.scan()
+    kleuren.append(kleur)
+    
+    robotArm.drop()
+
+    if i < 9:
+        robotArm.moveRight()
+
+for i in range(9):
+    robotArm.moveLeft()
+
+aantal_kleuren = Counter(kleuren)
+laagste_kleur = min(aantal_kleuren, key=aantal_kleuren.get)
+index_minste = kleuren.index(laagste_kleur)
+
+for i in range(index_minste):
+    robotArm.moveRight()
+robotArm.grab()
 
 # your code ends here
 
