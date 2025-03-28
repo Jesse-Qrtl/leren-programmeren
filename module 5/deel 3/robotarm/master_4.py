@@ -66,10 +66,6 @@ for i in range(4):
         robotArm.moveRight()
     teller = 0
 
-        
-
-
-
 # your code ends here
 
 # report the results of the mission

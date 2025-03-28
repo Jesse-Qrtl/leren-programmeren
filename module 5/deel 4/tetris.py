@@ -10,7 +10,7 @@ import pygame, sys, random
 # P - Pause game
 #
 # Have fun!
-
+score = 0
 CONFIG = {
     'cell_size': 20,
     'cols': 8,
@@ -45,6 +45,7 @@ class Tetris(object):
 		pygame.init()
 		pygame.key.set_repeat(250,25)
 
+		self.total_cleared = 0
 		self._config = config
 		self.width = config['cell_size']*config['cols']
 		self.height = config['cell_size']*config['rows']
@@ -57,8 +58,10 @@ class Tetris(object):
 
 	def start_game(self) -> None:
 		if self.gameover:
+			print(f"Total lines cleared: {self.total_cleared}")
 			self.new_board()
 			self.new_stone()
+			self.total_cleared = 0
 			self.gameover = False
 
 	def new_board(self) -> list:
@@ -102,6 +105,7 @@ class Tetris(object):
 						break
 
 				if cleared > 0:
+					self.total_cleared += cleared
 					self._config['delay'] = int(self._config['delay'] * 0.9)
 					if self._config['delay'] < 100:
 						self._config['delay'] = 100
@@ -180,7 +184,7 @@ class Tetris(object):
 		key_actions = {
 			'ESCAPE':	self.quit,
 			'a':		lambda:self.move(-1),
-			'd':	lambda:self.move(+1),
+			'd':		lambda:self.move(+1),
 			's':		self.drop,
 			'w':		self.rotate_stone,
 			'p':		self.toggle_pause,
@@ -195,7 +199,7 @@ class Tetris(object):
 		while 1:
 			self.screen.fill((0,0,0))
 			if self.gameover:
-				self.center_msg("Game Over!\nPress space to continue")
+				self.center_msg(f"Game Over!\nLines cleared {self.total_cleared}\nPress space to continue")
 			else:
 				if self.paused:
 					self.center_msg("Paused")
