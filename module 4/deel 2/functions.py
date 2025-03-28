@@ -127,7 +127,7 @@ def getCashInGoldFromPeople(people:list) -> float:
 def getInterestingInvestors(investors:list) -> list:
     lijst = []
     for investor in investors:
-        if investor['profitReturn'] < 10:
+        if investor['profitReturn'] <= 10:
             lijst.append(investor)
     return lijst
 
@@ -135,7 +135,7 @@ def getAdventuringInvestors(investors:list) -> list:
     lijst = []
     for investor in investors:
         if investor['adventuring']:
-            if investor['profitReturn'] < 10:
+            if investor['profitReturn'] <= 10:
                 lijst.append(investor)
     return lijst
 
@@ -198,7 +198,41 @@ def getAdventurerCut(profitGold: float, investorsCuts: list, fellowship: int) ->
 ##################### O14 #####################
 
 def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
-    pass
+    people = [mainCharacter] + friends + investors
+    earnings = []
+
+    # haal de juiste inhoud op
+    adventuringFriends = getAdventuringFriends(friends)
+    interestingInvestors = getInterestingInvestors(investors)
+    adventuringInvestors = getAdventuringInvestors(interestingInvestors)
+    investorsCuts = getInvestorsCuts(profitGold, investors)
+    goldCut = profitGold - sum(investorsCuts)
+    cutFor1Person = goldCut / (len(adventuringFriends) + len(adventuringInvestors) + 1)
+
+    # verdeel de uitkomsten
+    for person in people:
+        start = getPersonCashInGold(person['cash'])
+        end = start
+        if person == mainCharacter:
+            end += cutFor1Person
+            end += len(adventuringFriends) * 10
+        elif person in adventuringInvestors:
+            end += cutFor1Person
+            end += (profitGold * person['profitReturn'] / 100)
+        elif person in adventuringFriends:
+            end += cutFor1Person
+            end -= 10
+        elif person in interestingInvestors:
+            end += (profitGold * person['profitReturn'] / 100)
+        #code aanvullen
+
+        earnings.append({
+            'name'   : person['name'],
+            'start'  : round(start,2),
+            'end'    : round(end,2)
+        })
+
+    return earnings
 
 ##################### view functions #####################
 
