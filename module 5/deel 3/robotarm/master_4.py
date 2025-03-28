@@ -7,6 +7,7 @@ from challenges.master import challenges
 robotArm = RobotArm(challenges[4],0)
 
 # your code starts here:
+kleuren_stack = []
 kleuren = []
 
 for amount_blocks in range(3):
@@ -22,7 +23,7 @@ for i in range(4):
     robotArm.grab()
 
     kleur = robotArm.scan()
-    kleuren.append(kleur)   
+    kleuren_stack.append(kleur)   
 
     robotArm.drop()
     robotArm.moveRight()
@@ -38,25 +39,35 @@ for blocks in range(3):
     for i in range(2 + blocks):
         robotArm.moveRight()
 
-for i in range(2):
+robotArm.moveRight()
+
+for i in range(4):
     robotArm.moveRight()
+    robotArm.grab()
+    kleur = robotArm.scan()
+    kleuren.append(kleur)
+    robotArm.drop()
 
-for order in range(4):
-    for blocks in range(4):
-        robotArm.grab()
-        color = robotArm.scan()
-        if color == kleuren[order]:
-            for i in range(5 + blocks):
-                robotArm.moveLeft()
-            robotArm.drop()
-            for i in range(5):
-                robotArm.moveRight()
-            break
+for i in range(3):
+    robotArm.moveLeft()
 
-        else:
-            robotArm.drop()
+teller = 0 
+for i in range(4):
+    index = kleuren.index(kleuren_stack[i])
+    if index > 0:
+        for i in range(index):
             robotArm.moveRight()
-            
+            teller += 1
+    robotArm.grab()
+    for i in range(5 + teller):
+        robotArm.moveLeft()
+    robotArm.drop()
+    for i in range(5):
+        robotArm.moveRight()
+    teller = 0
+
+        
+
 
 
 # your code ends here
