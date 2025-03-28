@@ -6,7 +6,7 @@ cadeautjes = {}
 while True:
     naam = input('Wie doet er mee?: ').strip().lower()
     if naam in deelnemers:
-        print('Deze neemt had u al ingevoerd.')
+        print('Deze naam had u al ingevoerd.')
     else:
         deelnemers.append(naam)
 
@@ -33,8 +33,6 @@ while True:
     else:
         break
 
-
-print(cadeautjes)
 while True:
     print(f'\n{deelnemers}')
     naam_checken = input('Welke naam wil je checken?: ').strip().lower()
